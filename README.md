@@ -3,15 +3,17 @@
 proyecto: [Twitter-clone](https://github.com/bmonsalves/bdo-twitterClone)  
 
 ###Para correr api
+-------------------------------------
 ####Clonar y ejecutar Ejecutar
-$ cd bdo-twitterClone
+$ cd bdo-twitterClone  
 $ [sudo] gem install bundler  
-$ bundle install
-$ rake migrate
-$ ruby main.rb
+$ bundle install  
+$ rake migrate  
+$ ruby main.rb  
 
 
 ###Consumir api
+------------------------------------
 ####GET (todos)
 http://localhost:4567/api/users
 
