@@ -1,14 +1,25 @@
 # Rest service Twitter Clone
 
+proyecto: [Twitter-clone](https://github.com/bmonsalves/bdo-twitterClone)  
 
-##GET (todos)
+###Para correr api
+####Clonar y ejecutar Ejecutar
+$ cd bdo-twitterClone
+$ [sudo] gem install bundler  
+$ bundle install
+$ rake migrate
+$ ruby main.rb
+
+
+###Consumir api
+####GET (todos)
 http://localhost:4567/api/users
 
-##GET (uno)
+####GET (uno)
 http://localhost:4567/api/users/:id
 
 
-##POST
+####POST
 http://localhost:4567/api/users  
 
 Request body:  
@@ -17,7 +28,7 @@ Request body:
   "password": "passuser1"  
 }  
 
-##PUT
+####PUT
 http://localhost:4567/api/users/:id  
 Request body:  
 {  
@@ -25,5 +36,5 @@ Request body:
   "password": "passuser1"  
 } 
 
-##DELETE
+####DELETE
 http://localhost:4567/api/users/:id 
