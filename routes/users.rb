@@ -1,4 +1,6 @@
 # encoding: UTF-8
+require 'digest/md5'
+set :bind, '192.168.1.34'
 
 get '/api/users' do
   format_response(User.all, request.accept)
@@ -15,8 +17,12 @@ post '/api/users' do
     user:     body['user'],
     password: body['password'],
   )
+  generateToken = Digest::MD5.hexdigest(body['password'])
+  token = {:token => generateToken}
+  puts token
+
   status 201
-  format_response(user, request.accept)
+  format_response(token, request.accept)
 end
 
 put '/api/users/:id' do
